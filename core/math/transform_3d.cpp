@@ -97,7 +97,6 @@ Transform3D Transform3D::interpolate_with(const Transform3D &p_transform, real_t
 #ifdef MATH_CHECKS
 	ERR_FAIL_COND_V_MSG(!is_finite(), Transform3D(), "The starting transform is not finite, contains NaN or INF.");
 	ERR_FAIL_COND_V_MSG(!p_transform.is_finite(), Transform3D(), "The destination transform is not finite, contains NaN or INF.");
-	ERR_FAIL_COND_V_MSG(!Math::is_finite(p_c), Transform3D(), "The interpolation weight is not finite, contains NaN or INF.");
 #endif
 	Transform3D interp;
 
